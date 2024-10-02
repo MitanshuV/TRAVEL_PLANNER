@@ -9,9 +9,9 @@ Currently, two official plugins are available:
 
 Steps for Installation: 
 
- -step 1: Clone This Repository
- -step 2: navigate to cd /frontend
- -step 3: npm install to install the packages 
- -step 4: configure the tailwind and shadcn UI library
- -step 5: run commnad npm run dev
+- step 1: Clone This Repository
+- step 2: navigate to cd /frontend
+- step 3: npm install to install the packages 
+- step 4: configure the tailwind and shadcn UI library
+- step 5: run commnad npm run dev
  
