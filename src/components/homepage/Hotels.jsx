@@ -78,7 +78,7 @@ const Hotels = () => {
         method: "GET",
         headers: {
           "x-rapidapi-key":
-            "294b89f91cmsha7e8f918caa956fp18c66djsn3c69d1bdbeeb", // Replace with your actual key
+            "1ef1dc9277msh89ab270fe74a7f7p1abcd9jsn8a50e59e5b0b", // Replace with your actual key
           "x-rapidapi-host":
             "google-place-autocomplete-and-place-info.p.rapidapi.com",
         },
