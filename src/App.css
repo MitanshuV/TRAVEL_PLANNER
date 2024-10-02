@@ -1,0 +1,47 @@
+.body {
+  max-width: 1280px;      /* Set maximum width */
+  margin: 0 auto;         /* Center horizontally */
+  padding: 0.5rem;        /* Add padding */
+  width: 100%;            /* Ensure full width on smaller screens */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Global styles for loading screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background-color: black; /* Change to white if needed */
+  color: white; /* Change to black if background is white */
+  text-align: center;
+  position: fixed; /* Fixed positioning to cover entire screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; /* Ensures it appears above all content */
+}
+
+.loading-animation {
+  width: 300px; /* Adjust width of the animation as needed */
+  height: 300px; /* Adjust height of the animation as needed */
+}
+
+.loading-text {
+  margin-top: 1rem; /* Space between animation and text */
+  font-size: 1.5rem; /* Adjust text size as needed */
+}
+
+.scrollbar-hidden {
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+
