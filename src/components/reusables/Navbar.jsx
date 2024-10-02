@@ -63,12 +63,6 @@ const Navbar = () => {
             >
               My Trips
             </button>
-            <button
-              onClick={() => handleNavigation("/contact")}
-              className="hover:text-blue-500"
-            >
-              Contact
-            </button>
           </div>
         </div>
       </nav>
