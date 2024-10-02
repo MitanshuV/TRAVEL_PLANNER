@@ -68,7 +68,7 @@ const TripsGrid = ({ tripDetails }) => {
         method: "GET",
         headers: {
           "x-rapidapi-key":
-            "1211178346msh6b1db6542b9548fp1c193djsnddca6fcc7694",
+            "31fe203bc3msh06c8df44400ee2ep19bc21jsnb5e030ba4c82",
           "x-rapidapi-host": "unlimited-google-maps.p.rapidapi.com",
         },
       };

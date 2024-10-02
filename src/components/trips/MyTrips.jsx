@@ -41,11 +41,15 @@ const MyTrips = () => {
       <h2 className="text-3xl font-bold mb-6">My Trips</h2>
       <div className="trip-grid">
         {/* Display the fetched trips data */}
-        {trips.map((trip, index) => (
-          <div key={index}>
-            <TripsGrid tripDetails={trip} />
-          </div>
-        ))}
+        {trips.length === 0 ? (
+          <h2>No trips available. Create a new trip to get started!</h2>
+        ) : (
+          trips.map((trip, index) => (
+            <div key={index}>
+              <TripsGrid tripDetails={trip} />
+            </div>
+          ))
+        )}
       </div>
     </BlurFade>
   ); // Simple UI message
