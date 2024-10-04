@@ -72,7 +72,7 @@ const Attractions = () => {
         method: "GET",
         headers: {
           "x-rapidapi-key":
-            "31fe203bc3msh06c8df44400ee2ep19bc21jsnb5e030ba4c82", // Replace with your actual key
+            "f6615b4a07msh5d8f2482b153b70p1d9b3ajsnc00c5e79f418", // Replace with your actual key
           "x-rapidapi-host":
             "google-place-autocomplete-and-place-info.p.rapidapi.com",
         },
@@ -81,6 +81,8 @@ const Attractions = () => {
       try {
         const response = await fetch(url, options);
         const result = await response.json();
+        console.log(result);
+        
         setAutocompleteResults(result.predictions || []);
       } catch (error) {
         console.error(error);
@@ -104,7 +106,7 @@ const Attractions = () => {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "31fe203bc3msh06c8df44400ee2ep19bc21jsnb5e030ba4c82", // Replace with your actual key
+        "x-rapidapi-key": "f6615b4a07msh5d8f2482b153b70p1d9b3ajsnc00c5e79f418", // Replace with your actual key
         "x-rapidapi-host": "unlimited-google-maps.p.rapidapi.com",
       },
     };
