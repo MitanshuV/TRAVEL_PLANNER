@@ -138,9 +138,7 @@ const PersonalizedTrip = () => {
             <Button
               key={day}
               className={`mr-2 ${
-                selectedDay === day
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-300"
+                selectedDay === day ? "bg-blue-500 text-white" : "bg-gray-300"
               }`}
               onClick={() => setSelectedDay(day)}
             >
@@ -186,10 +184,14 @@ const PersonalizedTrip = () => {
                 key={attraction.id}
                 className="min-w-[280px] bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out p-6"
               >
-                <h3 className="text-lg font-semibold mb-2">{attraction.name}</h3>
-                <p className="text-gray-600 text-sm">{attraction.full_address}</p>
+                <h3 className="text-lg font-semibold mb-2">
+                  {attraction.name}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {attraction.full_address}
+                </p>
                 <p className="text-gray-800 mt-3">
-                  <span className="font-bold">{attraction.rating}</span> ⭐️ -{" "}
+                  <span className="font-bold">{attraction.rating ||  "4.3"}</span> ⭐️ -{" "}
                   <span className="text-gray-500">
                     ({attraction.review_count || "200"} reviews)
                   </span>
@@ -242,11 +244,13 @@ const PersonalizedTrip = () => {
       </div>
 
       {/* Right Container - Day-wise Itinerary */}
-      <div className="w-full md:w-1/2 bg-gray-100 p-6 overflow-auto">
+      <div className="w-full md:w-1/2 bg-white-100 p-6 overflow-auto">
         <h2 className="text-2xl font-bold mb-4">Your Itinerary</h2>
         {Object.keys(itinerary).map((day) => (
           <div key={day} className="mb-6 p-4 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-2">{day.replace("day", "Day ")}</h3>
+            <h3 className="text-xl font-bold mb-2">
+              {day.replace("day", "Day ")}
+            </h3>
             <h4 className="text-lg font-semibold">Hotels:</h4>
             {itinerary[day].hotels.map((hotel) => (
               <div key={hotel.id} className="mt-2">
@@ -255,6 +259,9 @@ const PersonalizedTrip = () => {
                   <p className="text-gray-600">{hotel.full_address}</p>
                   <p className="text-gray-800">
                     Rating: <strong>{hotel.rating}</strong> ⭐️
+                  </p>
+                  <p>
+                    Review: <strong>{hotel.review_count} Reviews</strong>
                   </p>
                 </div>
               </div>
