@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { MapPin } from "lucide-react";
+import { GlobeIcon, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import Particles from "./ui/particles";
 import BlurFade from "./ui/blur-fade";
@@ -48,6 +48,19 @@ const TripRecommendation = () => {
             <MapPin className="w-5 h-5 z-10" />
             <Link to={"/create-trip"} className="relative z-10">
               Start a trip with AI
+            </Link>
+          </Button>
+          <Button className="relative bg-purple-600 text-white hover:bg-black flex items-center justify-center gap-2 px-4 py-2 rounded-lg shadow-lg mt-4 transition duration-200 ease-in-out transform hover:scale-105">
+            <Particles
+              className="absolute inset-0 w-full h-full z-0"
+              particleColor="#ffffff" // Set particle color to white
+              particleSize={3} // Adjust particle size if needed
+              numberOfParticles={50} // Adjust the number of particles as necessary
+              style={{ filter: "blur(2px)" }} // Optional: add blur to particles
+            />
+            <GlobeIcon className="w-5 h-5 z-10" />
+            <Link to={"/personalized-trip"} className="relative z-10">
+              Start a Personalized Trip
             </Link>
           </Button>
         </div>

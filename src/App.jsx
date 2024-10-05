@@ -8,6 +8,7 @@ import TravelPreferencesForm from "./components/TravelPreferencesForm";
 import "./App.css";
 import MyTrips from "./components/trips/MyTrips";
 import TripDetails from "./components/trips/TripDetails";
+import PersonalizedTrip from "./components/PersonalizedTrip";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div className="min-h-screen body">
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/personalized-trip" element={<PersonalizedTrip />} />
           <Route path="/create-trip" element={<TravelPreferencesForm />} />
           {/* <Route path="/contact" element={<ContactPage />} /> */}
           <Route path="/my-trips" element={<MyTrips />} />
